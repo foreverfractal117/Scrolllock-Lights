@@ -1,0 +1,11 @@
+echo "Running..."
+# check uid
+if [ "$(id -u)" -ne 0 ]; then
+    echo "Please run this script as root. Aborting."
+    exit 1
+fi
+cd /sys/class/leds
+file=$(ls *::scrolllock/brightness)
+#Set file
+echo "1" > "$file"
+echo "Script complete."
