@@ -1,3 +1,3 @@
 #!/bin/bash
-sudo mv ./script/* /usr/bin
+sudo cp ./script/* /usr/bin
 echo "Installation complete."
